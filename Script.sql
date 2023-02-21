@@ -249,10 +249,10 @@ where r.role_name like '%Junior%';
 --13. Вывести имена и зарплаты Middle специалистов
 select employee_name, s.monthly_salary
 from employees e 
-left join employee_salary es on e.id = es.employee_id
-left join salary s on s.id = es.salary_id
-left join roles_employee re on e.id = re.employee_id
-left join roles r on r.id = re.role_id
+join employee_salary es on e.id = es.employee_id
+join salary s on s.id = es.salary_id
+join roles_employee re on e.id = re.employee_id
+join roles r on r.id = re.role_id
 where r.role_name like '%Middle%';
 
 
@@ -270,10 +270,10 @@ where r.role_name like '%Middle%';
 --14. Вывести имена и зарплаты Senior специалистов
 select e.employee_name, s.monthly_salary
 from employees e 
-left join employee_salary es on e.id = es.employee_id
-left join salary s on s.id = es.salary_id
-left join roles_employee re on e.id = re.employee_id
-left join roles r on r.id = re.role_id
+join employee_salary es on e.id = es.employee_id
+join salary s on s.id = es.salary_id
+join roles_employee re on e.id = re.employee_id
+join roles r on r.id = re.role_id
 where r.role_name like '%Senior%';
 
 --15. Вывести зарплаты Java разработчиков
